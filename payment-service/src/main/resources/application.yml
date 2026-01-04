@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/appdb
+    username: app
+    password: app
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: localhost:9092
+
+app:
+  kafka:
+    topic: order-created-topic
+    dlqTopic: order-created-topic.DLQ
